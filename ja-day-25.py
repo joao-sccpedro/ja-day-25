@@ -10,7 +10,7 @@ st.set_page_config(page_title="Descubra o seu tema!")
 st.title("🔮 Descubra o seu tema!")
 
 # ✅ Conectar ao Google Sheets
-gc = gspread.service_account(filename='credentials.json')  # Arquivo JSON da sua conta de serviço
+gc = gspread.service_account_from_dict(st.secrets["google_service_account"])
 sh = gc.open("Respostas App Destino")  # Nome da sua planilha no Google Sheets
 worksheet = sh.sheet1  # Primeira aba da planilha
 
