@@ -27,20 +27,20 @@ except Exception as e:
 
 # ✅ Opções de temas
 male_options = [
-    "Futebol ⚽\n\nEm clima de Copa do Mundo de Clubes, você pode vir com a camisa de um time de futebol e, se quiser ir além, pode vir com chuteira e tudo",
-    "Números 🔢\n\nTodo mundo sabe que eu gosto um pouquinho de números. Então vamos trazer isso como um tema também. Sua roupa tem que ter algum número. Qualquer um, em qualquer lugar. Na frente, nas costas, o importante é ter um número pra gente admirar",
-    "Joãozinho 🤓\n\nJá que é JA Day, que seja pra valer! Você deve vir vestido de Joãozinho (no caso eu). Qualquer coisa que eu usaria vale, monte seu visual mais engraçado de Joãozinho para esse dia",
-    "Ops! Lugar errado! 😅\n\nVista-se para ir para qualquer outro lugar que não o meu aniversário. Pode se vestir como se estivesse indo para o escritório, para a academia, para a praia ou qualquer outro lugar",
-    "Monocromático 🕴\n\nTem que combinar tudo. A roupa de cima, a roupa de baixo, o calçado, tudo no mesmo tom. Pode se vestir todo de branco como se fosse jogar uma partida em Wimbledon, pode lançar o all black tradicional ou surpreender com uma cor diferente",
-    "Personagem 🎭\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem, seja histórico ou ficcional"
+    "**Futebol ⚽**\n\nEm clima de Copa do Mundo de Clubes, você pode vir com a camisa de um time de futebol e, se quiser ir além, pode vir com chuteira e tudo.",
+    "**Números 🔢**\n\nTodo mundo sabe que eu gosto um pouquinho de números. Então vamos trazer isso como um tema também. Sua roupa tem que ter algum número. Qualquer um, em qualquer lugar. Na frente, nas costas, o importante é ter um número pra gente admirar.",
+    "**Joãozinho 🤓**\n\nJá que é JA Day, que seja pra valer! Você deve vir vestido de Joãozinho (no caso eu). Qualquer coisa que eu usaria vale, monte seu visual mais engraçado de Joãozinho para esse dia.",
+    "**Ops! Lugar errado! 😅**\n\nVista-se para ir para qualquer outro lugar que não o meu aniversário. Pode se vestir como se estivesse indo para o escritório, para a academia, para a praia ou qualquer outro lugar.",
+    "**Monocromático 🕴**\n\nTem que combinar tudo. A roupa de cima, a roupa de baixo, o calçado, tudo no mesmo tom. Pode se vestir todo de branco como se fosse jogar uma partida em Wimbledon, pode lançar o all black tradicional ou surpreender com uma cor diferente.",
+    "**Personagem 🎭**\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem, seja histórico ou ficcional."
 ]
 
 female_options = [
-    "Números 🔢\n\nTodo mundo sabe que eu gosto um pouquinho de números. Então vamos trazer isso como um tema também. Sua roupa tem que ter algum número",
-    "Joãozinho 🤓\n\nJá que é JA Day, que seja pra valer! Você deve vir vestida de Joãozinho (no caso eu). Qualquer coisa que eu usaria vale",
-    "Ops! Lugar errado! 😅\n\nVista-se para ir para qualquer outro lugar que não o meu aniversário",
-    "Monocromático 🕴\n\nTem que combinar tudo. A roupa de cima, a roupa de baixo, o calçado, tudo no mesmo tom. Pode se vestir toda de branco como se fosse jogar uma partida em Wimbledon, pode lançar o all black tradicional ou surpreender com uma cor diferente",
-    "Personagem 🎭\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem"
+    "Números 🔢\n\nTodo mundo sabe que eu gosto um pouquinho de números. Então vamos trazer isso como um tema também. Sua roupa tem que ter algum número.",
+    "Joãozinho 🤓\n\nJá que é JA Day, que seja pra valer! Você deve vir vestida de Joãozinho (no caso eu). Qualquer coisa que eu usaria vale.",
+    "Ops! Lugar errado! 😅\n\nVista-se para ir para qualquer outro lugar que não o meu aniversário.",
+    "Monocromático 🕴\n\nTem que combinar tudo. A roupa de cima, a roupa de baixo, o calçado, tudo no mesmo tom. Pode se vestir toda de branco como se fosse jogar uma partida em Wimbledon, pode lançar o all black tradicional ou surpreender com uma cor diferente.",
+    "Personagem 🎭\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem."
 ]
 
 other_options = male_options  # Mesmos temas do masculino para 'outro'
@@ -68,7 +68,7 @@ if submitted:
         else:
             result = random.choice(other_options)
 
-        st.success(f"🎉 {name}, o seu tema será... **{result}!**")
+        st.success(f"🎉 {name}, o seu tema será... {result}")
 
         # 📝 Salvar os dados
         user_data = {
