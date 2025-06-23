@@ -11,7 +11,7 @@ st.title("🔮 Descubra o seu tema!")
 
 # ✅ Conectar ao Google Sheets
 gc = gspread.service_account_from_dict(st.secrets["google_service_account"])
-sh = gc.open("Respostas App Destino")  # Nome da sua planilha no Google Sheets
+sh = gc.open("JA-Day-25")  # Nome da sua planilha no Google Sheets
 worksheet = sh.sheet1  # Primeira aba da planilha
 
 # ✅ Ler dados existentes
