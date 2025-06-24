@@ -28,12 +28,10 @@ except Exception as e:
 # ✅ Opções de temas
 male_options = [
     "**Futebol! ⚽**\n\nEm clima de Copa do Mundo de Clubes, você pode vir com a camisa de um time de futebol e, se quiser ir além, pode vir com chuteira e tudo.",
-    "**Números! 🔢**\n\nTodo mundo sabe que eu gosto um pouquinho de números. Então vamos trazer isso como um tema também. Sua roupa tem que ter algum número. Qualquer um, em qualquer lugar. Na frente, nas costas, o importante é ter um número pra gente admirar.",
     "**Personagem! 🎭**\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem, seja histórico ou ficcional."
 ]
 
 female_options = [
-    "**Números! 🔢**\n\nTodo mundo sabe que eu gosto um pouquinho de números. Então vamos trazer isso como um tema também. Sua roupa tem que ter algum número. Qualquer um, em qualquer lugar. Na frente, nas costas, o importante é ter um número pra gente admirar.",
     "**Personagem! 🎭**\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem."
 ]
 
