@@ -43,8 +43,6 @@ female_options = [
     "**Personagem! 🎭**\n\nPouco importa como. Pode ser cosplay, cospobre, máscara ou algum trocadilho. O importante é que você tem que representar algum personagem."
 ]
 
-debora_options = ["**Branco!**\n\nTire suas roupas brancas do guarda-roupas e traga o seu melhor visual na cor branca para essa festa!"]
-
 other_options = male_options  # Mesmos temas do masculino para 'outro'
 
 # ✅ Formulário
@@ -63,15 +61,12 @@ if submitted:
         st.error("🚫 Este nome já foi utilizado. Você já preencheu antes!")
     else:
         # 🎲 Escolher o tema
-        if name.strip().lower().startswith("d"):
-            result = random.choice(debora_options)
+        if gender == "Masculino":
+            result = random.choice(male_options)
+        elif gender == "Feminino":
+            result = random.choice(female_options)
         else:
-            if gender == "Masculino":
-                result = random.choice(male_options)
-            elif gender == "Feminino":
-                result = random.choice(female_options)
-            else:
-                result = random.choice(other_options)
+            result = random.choice(other_options)
 
         st.success(f"🎉 {name}, o seu tema será... {result}")
 
