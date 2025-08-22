@@ -11,7 +11,7 @@ st.title("Uma pesquisa do vosso amigo Joãozinho")
 # ✅ Conectar ao Google Sheets
 gc = gspread.service_account_from_dict(st.secrets["google_service_account"])
 sh = gc.open("JA-Day-25")
-worksheet = sh.sheet2
+worksheet = sh.sheet1
 
 # ✅ Tentar ler os dados
 try:
