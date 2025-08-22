@@ -32,7 +32,7 @@ with st.form("user_form"):
     contract = st.selectbox("Qual é o seu regime de trabalho?", ["CLT", "PJ"])
     work_mode = st.selectbox("Qual é o seu modelo de trabalho?", ["Remoto", "Híbrido", "Presencial"])
     seniority = st.selectbox("Qual é o seu nível de carreira?", ["Júnior", "Pleno", "Sênior"])
-    observations = st.text_area("Alguma observação adicional? (opcional)").strip()
+    observations = st.text_area("Alguma observação adicional? Exemplo: se é pago em outra moeda originalmente, cidade em que a empresa é sediada, se o trampo é maneiro, etc. (opcional)").strip()
 
     submitted = st.form_submit_button("Enviar")
 
