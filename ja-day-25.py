@@ -18,22 +18,13 @@ try:
     df = get_as_dataframe(worksheet).dropna(how="all")
 
     # Se dataframe está vazio ou não tem as colunas, cria a estrutura
-    if df.empty or not set(["Timestamp", "Salary", "Contract", "Result"]).issubset(df.columns):
-        df = pd.DataFrame(columns=["Timestamp", "Salary", "Contract", "Result"])
+    if df.empty or not set(["Timestamp", "Salary", "Contract"]).issubset(df.columns):
+        df = pd.DataFrame(columns=["Timestamp", "Salary", "Contract"])
 
 except Exception as e:
     st.error(f"Erro ao carregar dados: {e}")
-    df = pd.DataFrame(columns=["Timestamp", "Salary", "Contract", "Result"])
-
-# ✅ Opções de resultados (pode personalizar conforme quiser)
-clt_options = [
-    "Muitíssimo obrigado, amigue."
-]
-
-pj_options = [
-    "Muitíssimo obrigado, amigue."
-]
-
+    df = pd.DataFrame(columns=["Timestamp", "Salary", "Contract"])
+    
 # ✅ Formulário
 with st.form("user_form"):
     salary = st.text_input("Qual é o seu salário médio bruto (R$)?").strip()
@@ -42,22 +33,14 @@ with st.form("user_form"):
 
     submitted = st.form_submit_button("Enviar")
 
-if submitted:
-    # 🎲 Escolher o resultado
-    if contract == "CLT":
-        result = random.choice(clt_options)
-    else:
-        result = random.choice(pj_options)
-
     st.success(f"📌 Você informou salário de R$ {salary} e regime {contract}.")
-    st.info(f"💡 Resultado para você: {result}")
+    st.info(f"Valeu! ♥♥♥")
 
     # 📝 Salvar os dados
     user_data = {
         "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Salary": salary,
         "Contract": contract,
-        "Result": result
     }
 
     df = pd.concat([df, pd.DataFrame([user_data])], ignore_index=True)
