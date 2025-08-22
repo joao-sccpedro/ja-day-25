@@ -34,7 +34,6 @@ with st.form("user_form"):
     submitted = st.form_submit_button("Enviar")
 
     st.success(f"📌 Você informou salário de R$ {salary} e regime {contract}.")
-    st.info(f"Valeu! ♥♥♥")
 
     # 📝 Salvar os dados
     user_data = {
@@ -46,4 +45,4 @@ with st.form("user_form"):
     df = pd.concat([df, pd.DataFrame([user_data])], ignore_index=True)
     set_with_dataframe(worksheet, df)
 
-    st.info("✅ Seus dados foram salvos com sucesso. Obrigado!")
+    st.info("✅ Essa informação foi salva com sucesso. Valeu demais, Marciers!")
